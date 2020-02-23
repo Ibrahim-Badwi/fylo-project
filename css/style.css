@@ -371,6 +371,11 @@ form {
   opacity: 0.8;
 }
 
+nav ul li a:hover {
+  border-bottom: 1px solid var(--ModerateCyan);
+  padding-bottom: 5px;
+}
+
 ul li a:hover,
 .contacts a:hover {
   border-bottom: 1px solid #ffffff;
