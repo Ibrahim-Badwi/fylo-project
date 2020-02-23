@@ -13,38 +13,47 @@
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 100%;
+  box-sizing: border-box;
+  font-size: 100%;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
-    /* padding: 0; */
-    /* margin: 0; */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  /* padding: 0; */
+  /* margin: 0; */
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  background-color: #ffffff;
 }
 
 h1 {
-    font-size: calc(1.2rem + 1.3vw);
+  font-size: calc(1.2rem + 1.3vw);
 }
 
 h2 {
-    font-size: calc(1rem + 1.3vw);
+  font-size: calc(1rem + 1.3vw);
 }
 
 h3 {
-    font-size: calc(1.2rem + 1.3vw);
+  font-size: calc(1.2rem + 1.3vw);
 }
 
-h1, h2 {
+nav ul li a {
+  font-size: calc(0.8rem + 0.4vw);
+  color: var(--DesaturatedBlue);
+  font-weight: 400;
+}
+
+h1,
+h2 {
   color: var(--VeryDarkBlue);
 }
 
@@ -54,23 +63,24 @@ h3,
 header,
 nav,
 .cta {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
   color: var(--DesaturatedBlue);
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 img {
-    max-width: 100%;
+  width: 100%;
+  display: block;
 }
 
 /* Layout
@@ -92,7 +102,7 @@ nav {
   margin-top: 25px;
 }
 
-nav ul li{
+nav ul li {
   display: inline;
   font-size: 0.9rem;
   margin-left: 10px;
@@ -108,44 +118,58 @@ nav ul li{
 ------------------------------------*/
 figure img {
   margin: 30px 0;
+  max-width: 600px;
+  width: 100%;
 }
 
-.hero h1 {
+.content {
+  text-align: center;
+  max-width: 700px;
+}
+
+.content h1 {
   text-align: center;
 }
 
-.hero p {
+.content p {
   margin: 35px 0;
+  width: 100%;
 }
 
 /* work
 ------------------------------------*/
-.work{
+.work {
   margin: 100px 0;
   background-color: #f8f8fe;
 }
 
-.work h2 {
+.work-content {
+  text-align: center;
+  max-width: 700px;
+}
+
+.work-content h2 {
   margin: 40px 0;
 }
 
-.work p {
+.work-content p {
   text-align: left;
   margin-bottom: 20px;
 }
 
 .see-work {
+  max-width: 200px;
   border-bottom: 2px solid var(--ModerateCyan);
   font-weight: 600;
-  margin: 30px 0;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .testimonial {
-  height: 210px;
-  border: 1px solid ;
+  border: 1px solid;
+  max-width: 400px;
   width: 95%;
   margin-top: 50px;
   padding: 15px;
@@ -153,6 +177,10 @@ figure img {
   border: 1px solid hsla(0, 0%, 75%, 0.4);
   border-radius: 2px;
   box-shadow: 2px 2px 10px var(--LightGray);
+}
+
+.testimonial img {
+  width: auto;
 }
 
 .testimonial p {
@@ -202,7 +230,6 @@ figure img {
   color: #ffffff;
   margin: 25px 0;
 }
-
 
 /* Footer
 ------------------------------------*/
@@ -280,6 +307,7 @@ footer {
   text-align: center;
   margin: 0;
   color: #ffffff;
+  padding-bottom: 5px;
 }
 
 .attribution a {
@@ -288,8 +316,12 @@ footer {
 
 /* UI
 ------------------------------------*/
-.email-form {
+form {
+  max-width: 500px;
   width: 100%;
+}
+
+.email-form {
   display: flex;
   flex-direction: column;
 }
@@ -304,6 +336,7 @@ footer {
 .access .email-form {
   width: 80%;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .cta {
@@ -327,32 +360,236 @@ footer {
   line-height: 50px;
 }
 
-.arrow-icon{
+.arrow-icon {
   width: 25px;
   height: 25px;
   margin-left: 10px;
 }
 
+/* States */
+.cta:hover {
+  opacity: 0.8;
+}
+
+ul li a:hover,
+.contacts a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+.see-work:hover {
+  border-top: 1px solid var(--ModerateCyan);
+  border-right: 1px solid var(--ModerateCyan);
+  border-left: 1px solid var(--ModerateCyan);
+}
+
+.social i:hover {
+  opacity: 0.8;
+}
+
 /* Responsive
 ------------------------------------*/
 
-/* Mobile Styles */
 @media only screen and (max-width: 375px) {
   body {
     /* background-color: #F09A9D; */
   }
 }
 
-/* Tablet Styles */
 @media only screen and (min-width: 376px) and (max-width: 960px) {
   body {
-    background-color: #F5CF8E;
+    /* background-color: #F5CF8E; */
+  }
+
+  .wrapper {
+    width: 95%;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .logo {
+    width: 100px;
+    height: 30px;
+  }
+
+  figure img {
+    margin: 30px 0;
+  }
+
+  .content h1 {
+    text-align: center;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+  }
+
+  .hero form {
+    max-width: 500px;
+  }
+
+  .work p {
+    text-align: center
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .testimonial {
+    margin: 0 auto;
+    margin-top: 40px;
   }
 }
 
-/* Desktop Styles */
+@media only screen and (min-width: 450px) {
+  .form-1 {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    margin: 0 auto;
+  }
+
+  .cta-1 {
+    width: 30%;
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+
+  .form-1 .email {
+    width: 70%;
+  }
+
+  .testimonial p {
+    text-align: left;
+  }
+}
+
 @media only screen and (min-width: 961px) {
   body {
-    background-color: #B2D6FF;
+    /* background-color: #B2D6FF; */
+  }
+
+  .wrapper {
+    width: 85%;
+  }
+
+  nav {
+    width: 100%;
+    margin: 50px;
+  }
+
+  .logo {
+    height: 40px;
+    width: 130px
+  }
+
+  nav ul li {
+    margin-left: 30px;
+  }
+
+  .hero .wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 400px;
+  }
+
+  .hero .wrapper figure {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  figure img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .content {
+    width: 500px;
+    margin-right: 20px;
+  }
+
+  .content,
+  .content h1 {
+    text-align: left;
+  }
+
+  .form-1 {
+    width: 800px;
+    margin: 0;
+  }
+
+  .cta-1 {
+    text-align: center;
+  }
+
+  .work .wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .work {
+    margin-bottom: 0;
+    padding-bottom: 100px;
+  }
+
+  .work-content {
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 350px;
+  }
+
+  .see-work {
+    margin: 0;
+  }
+
+  .work-content h2 {
+    font-size: 25px;
+  }
+
+  .access {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 80px;
+  }
+
+  .access div {
+    text-align: left;
+    width: 40%;
+  }
+
+  .access .email-form {
+    width: 50%;
+  }
+
+  .cta-2 {
+    width: 50%;
+    padding: 0 10px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .contacts {
+    padding: 0;
+  }
+
+  footer {
+    padding: 100px 0 0 0;
+  }
+
+  .attribution {
+    margin-top: 100px;
   }
 }
