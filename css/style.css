@@ -326,11 +326,12 @@ form {
   flex-direction: column;
 }
 
-.email-form input {
+.email-form button {
   height: 48px;
+  font-size: 1rem;
   padding-left: 20px;
   border-radius: 5px;
-  border: 1px solid grey;
+  border: none;
 }
 
 .access .email-form {
