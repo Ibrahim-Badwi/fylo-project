@@ -376,6 +376,11 @@ ul li a:hover,
   border-bottom: 1px solid #ffffff;
 }
 
+nav ul li a:hover {
+  border-bottom: 1px solid var(--ModerateCyan);
+  padding-bottom: 5px;
+}
+
 .see-work:hover {
   border-top: 1px solid var(--ModerateCyan);
   border-right: 1px solid var(--ModerateCyan);
